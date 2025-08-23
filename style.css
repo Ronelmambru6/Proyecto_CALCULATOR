@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.tituloPage {
+    padding: .75rem;
+    border-style: solid;
+    color: white;
+    border-radius: 1.2rem;
+    border-width: .20rem;
+
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color:rgb(14, 173, 221);
+}
+
+.calculadora {
+    background-color: rgb(8, 148, 190);
+    color: white;
+    display: grid;
+    border-radius: 1.2rem;
+    grid-template-columns: repeat(4,1fr);
+    width: 350px;
+    padding: 1.5rem;
+    gap: .3rem;
+    max-width: 100;
+}
+
+.pantalla {
+    grid-column: 1 / -1;
+    background-color: rgb(8, 113, 145);
+    padding: .1rem .8rem;
+    margin-bottom: 1.2rem;
+    border-radius: .6rem;
+    font-size: 3rem;
+    text-align: right;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma,  Verdana;
+    word-wrap: break-word;
+}
+
+.btn {
+    background-color: rgb(14, 173, 221);
+    color: white;
+    font-weight: 400;
+    border-radius: .5rem;
+    padding: 1.2rem .5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(8, 113, 145);
+    transition: 0.2s;
+    
+}
+
+#igual {
+    grid-row: span 2;
+    background-color:aqua;
+    color: rgb(8, 113, 145);
+    font-size: 2rem;
+}
+
+#igual:hover {
+    background-color: white;
+}
