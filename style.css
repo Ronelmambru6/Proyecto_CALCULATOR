@@ -10,7 +10,8 @@
     border-style: solid;
     color: white;
     border-radius: 1.2rem;
-    border-width: .20rem;
+    border-width: .15rem;
+    font-size: 2.5rem;
 
 }
 
@@ -18,7 +19,7 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    background-color:rgb(14, 173, 221);
+    background-color:rgb(15, 2, 64);
 }
 
 .calculadora {
@@ -27,7 +28,8 @@ body {
     display: grid;
     border-radius: 1.2rem;
     grid-template-columns: repeat(4,1fr);
-    width: 350px;
+    width: 420px;
+    height: 570px;
     padding: 1.5rem;
     gap: .3rem;
     max-width: 100;
@@ -66,6 +68,12 @@ body {
     
 }
 
+#sigOp, #porCiento {
+    background-color: aqua;
+    color: rgb(8, 113, 145);
+    font-size: 1.5rem;
+}
+
 #igual {
     grid-row: span 2;
     background-color:aqua;
@@ -73,6 +81,6 @@ body {
     font-size: 2rem;
 }
 
-#igual:hover {
+#igual:hover, #sigOp:hover, #porCiento:hover {
     background-color: white;
 }
