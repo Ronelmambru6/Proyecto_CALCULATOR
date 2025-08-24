@@ -8,6 +8,7 @@ botones.forEach(boton => {
         
         if (boton.id === "c") {
         pantalla.textContent = "0";
+        expresion = '';
             return;
         }
 
@@ -30,12 +31,14 @@ botones.forEach(boton => {
         }
 
         if (boton.id === "igual") {
-            try {
+            if(expresion.trim() !== '') {
+                try {
                 pantalla.textContent = eval(expresion);
                 expresion = pantalla.textContent;
-            } catch  {
+                } catch  {
                 pantalla.textContent = "Error inesperado!"
                 expresion = '';
+                }    
             }
             return;
         }
