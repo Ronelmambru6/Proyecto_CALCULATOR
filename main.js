@@ -2,6 +2,10 @@ const pantalla = document.querySelector(".pantalla");
 const botones = document.querySelectorAll(".btn");
 let expresion = '';
 
+pantalla.addEventListener('animationend', () => {
+    pantalla.classList.remove('pantalla-error');
+});
+
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
         const botonApretado = boton.textContent;
@@ -34,10 +38,12 @@ botones.forEach(boton => {
             if(expresion.trim() !== '') {
                 try {
                 pantalla.textContent = eval(expresion);
+                pantalla.classList.remove('pantalla-error')
                 expresion = pantalla.textContent;
                 } catch  {
                 pantalla.textContent = "Error inesperado!"
                 expresion = '';
+                pantalla.classList.add('pantalla-error')
                 }    
             }
             return;
